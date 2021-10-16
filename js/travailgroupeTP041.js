@@ -70,7 +70,7 @@ function travailGroupe()
 		}
 		for  (let emplacement=1; emplacement<5; emplacement++) 
 		{
-			couleurChoisie = prompt("Quel couleur voulez-vous mettre à l'emplacement  " + emplacement + " ?");
+			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ?");
 			
 			if ((couleurChoisie == "orange") ||
 				(couleurChoisie == "bleu") ||
@@ -87,7 +87,7 @@ function travailGroupe()
 				emplacement -= 1;
 			}
 		}
-		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3]))
+		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3]) 
 		{
 			console.log("Bravo, vous avez gagné");
 		break;
@@ -96,7 +96,7 @@ function travailGroupe()
 		{
 			if ( reponseUser[compteur] == combinaisonOrdi[compteur] )
 			{
-				console.log("La couleur  " + (compteur + 1) +"est bonne !")
+				console.log("La couleur  " + (compteur + 1) +" est bonne !")
 			}
 		}
 	}
