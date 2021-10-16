@@ -63,6 +63,7 @@ function travailGroupe()
 		if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées
 		{
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
+			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
 			break;
 		}
 		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative"
