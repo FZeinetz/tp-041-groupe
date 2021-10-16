@@ -18,23 +18,23 @@ function travailGroupe()
 	for (let compteur=0 ; compteur<4; compteur++)
 	{
 	combinaisonOrdi.push(Math.floor(Math.random() * 6))
-		switch (true)
-		{
-			case (combinaisonOrdi[compteur] == 0) : combinaisonOrdi[compteur] = "orange";
-								break;
-			case (combinaisonOrdi[compteur] == 1) : combinaisonOrdi[compteur] = "bleu";
-								break;
-			case (combinaisonOrdi[compteur] == 2) : combinaisonOrdi[compteur] = "rouge";
-								break;
-			case (combinaisonOrdi[compteur] == 3) : combinaisonOrdi[compteur] = "vert";
-								break;
-			case (combinaisonOrdi[compteur] == 4) : combinaisonOrdi[compteur] = "jaune";
-								break;
-			case (combinaisonOrdi[compteur] == 5) : combinaisonOrdi[compteur] = "violet";
-								break;
-			default: console.log("RIP");
+	switch (true)
+	{
+		case (combinaisonOrdi[compteur] == 0) : combinaisonOrdi[compteur] = "orange";
+							break;
+		case (combinaisonOrdi[compteur] == 1) : combinaisonOrdi[compteur] = "bleu";
+							break;
+		case (combinaisonOrdi[compteur] == 2) : combinaisonOrdi[compteur] = "rouge";
+							break;
+		case (combinaisonOrdi[compteur] == 3) : combinaisonOrdi[compteur] = "vert";
+							break;
+		case (combinaisonOrdi[compteur] == 4) : combinaisonOrdi[compteur] = "jaune";
+							break;
+		case (combinaisonOrdi[compteur] == 5) : combinaisonOrdi[compteur] = "violet";
+							break;
+		default: console.log("RIP");
 
-		}
+	}
 	}
 	for  (let emplacement=1; emplacement<5; emplacement++) 
 	{
