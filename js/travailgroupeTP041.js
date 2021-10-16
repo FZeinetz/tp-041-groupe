@@ -1,4 +1,4 @@
-Description programme :
+/* Description programme :
 
 Pour le fonctionnement du programme : 
 1) On génère une combinaison de 4 chiffres aléatoires (parmi 6 choix possibles) dans un array [combinaisonOrdi] 
@@ -13,6 +13,7 @@ combinaisonOrdi avec 4 couleurs dedans. Ex [bleu, blanc, jaune, rouge]
 5) La console renvoie à l'utilisateur le résultat de la comparaison au niveau des couleurs et au niveaux des positions 
 
 6) Ensuite l'utilisateur renvoie une nouvelle série de 4 couleurs, etc... /!\ il nous faut un compteur de manche pour que le jeu se termine au max après 10 tentatives OU avant si le joueur à la combinaison exacte (avec un return "message de fin" par exemple)
+*/
 
 "use strict";
 
