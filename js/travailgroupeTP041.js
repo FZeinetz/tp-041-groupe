@@ -35,22 +35,32 @@ function travailGroupe()
 		default: console.log("RIP");
 	}
 	}
-	for  (let emplacement=1; emplacement<5; emplacement++) 
+	for (let tentative = 0; tentative < 10; tentative++) 
 	{
-		couleurChoisie = prompt("Quel couleur voulez-vous mettre à l'emplacement  " + emplacement + " ?");
-		
-		if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet"))
+		for  (let emplacement=1; emplacement<5; emplacement++) 
 		{
-			reponseUser.push(couleurChoisie);
+			couleurChoisie = prompt("Quel couleur voulez-vous mettre à l'emplacement  " + emplacement + " ?");
+
+			if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet"))
+			{
+				reponseUser.push(couleurChoisie);
+			}
+			else 
+			{
+				console.log("Erreur, nous n’avons pas compris. Veuillez choisir une couleur parmi orange, bleu, rouge, vert, jaune et violet");
+				emplacement -= 1;
+			}
 		}
-		else 
+		for (let compteur = 0; compteur < reponseUser.length; compteur++)
 		{
-			console.log("Erreur, nous n’avons pas compris. Veuillez choisir une couleur parmi orange, bleu, rouge, vert, jaune et violet");
-			emplacement -= 1;
+			if ( reponseUser[compteur] == combinaisonOrdi[compteur] )
+			{
+				console.log("La couleur  " + (compteur + 1) +"est bonne ! ")
+			}
+
 		}
 	}
-
-
+	console.log ("10 tentatives terminées. Vous avez perdu !")
 console.log(reponseUser);
 console.log(combinaisonOrdi);
 }
