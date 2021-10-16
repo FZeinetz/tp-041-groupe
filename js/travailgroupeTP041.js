@@ -81,6 +81,10 @@ function travailGroupe()
 			{
 				reponseUser.push(couleurChoisie);
 			}
+			else if (couleurChoisie == "stop")
+			{
+				break;
+			}
 			else 
 			{
 				console.log("Erreur, nous n’avons pas compris. Veuillez choisir une couleur parmi orange, bleu, rouge, vert, jaune et violet");
