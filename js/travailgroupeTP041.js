@@ -33,7 +33,6 @@ function travailGroupe()
 		case (combinaisonOrdi[compteur] == 5) : combinaisonOrdi[compteur] = "violet";
 							break;
 		default: console.log("RIP");
-
 	}
 	}
 	for  (let emplacement=1; emplacement<5; emplacement++) 
