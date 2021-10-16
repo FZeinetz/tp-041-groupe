@@ -91,7 +91,7 @@ function travailGroupe()
 				emplacement -= 1;
 			}
 		}
-		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3]) 
+		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3]))
 		{
 			console.log("Bravo, vous avez gagné");
 		break;
