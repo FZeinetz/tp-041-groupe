@@ -70,7 +70,7 @@ function travailGroupe()
 		}
 		for  (let emplacement=1; emplacement<5; emplacement++) 
 		{
-			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ?");
+			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ? Si vous voulez arrêter de jouer, écrivez\"stop\"");
 			
 			if ((couleurChoisie == "orange") ||
 				(couleurChoisie == "bleu") ||
