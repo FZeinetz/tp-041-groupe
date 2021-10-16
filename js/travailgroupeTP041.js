@@ -74,7 +74,7 @@ function travailGroupe()
 			
 			if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet"))
 			{
-				reponseUser.push(couleurChoisie);
+				reponseUser[emplacement-1]=couleurChoisie;
 			}
 			else 
 			{
