@@ -2,7 +2,7 @@
 
 /**
  * Fonction qui respecte le principe du jeu de société "Mastermind" :
- * Le but du jeu du Mastermind est pour le joueur de deviner en un minimum de tentatives une combinaison de 4 couleurs choisie aléatoirement (ici, par l'ordinateur) 
+ * Le but du jeu Mastermind est pour le joueur de deviner en un minimum de tentatives une combinaison de 4 couleurs choisie aléatoirement (ici, par l'ordinateur) 
  *
  * @param {}
  *
@@ -14,7 +14,7 @@ function jouerAuMastermind()
 {
 	// déclaration des variables 
 	let combinaisonOrdi = []; // tableau contenant la combinaison de couleurs choisie aléatoirement
-	let couleurChoisie; // Couleur entrée par l'utilisateur lorsque demandée 
+	let couleurChoisie; // Couleur entrée par l'utilisateur lorsque demandé 
 	let reponseUser = []; // tableau contenant la combinaison choisie par l'utilisateur
 	let tentative; // nombre de tentatives de l'utilisateur
 
@@ -22,7 +22,7 @@ function jouerAuMastermind()
 	{
 	combinaisonOrdi.push(Math.floor(Math.random() * 6)) // Attribution de 4 chiffres aléatoires entre 0 et 5 pour les 4 premiers emplacements de l'array 
 
-		switch (true) // Convertion des chiffres en string pour chacune des couleur proposée
+		switch (true) // Conversion des chiffres en string pour chacune des couleur proposée
 		{
 			case (combinaisonOrdi[compteur] == 0) : combinaisonOrdi[compteur] = "orange";
 													break;
