@@ -4,7 +4,7 @@ Travail de groupe du TP04 en logique et programmation.
 
 Groupe composé de:
 Martin Hayot,
-Julien,
+Julien Francis,
 Tanguy Patron,
-Désiré,
-Florian.
+Désiré Saucez,
+Florian Zeinetz.
