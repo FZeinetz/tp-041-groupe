@@ -92,23 +92,16 @@ function travailGroupe()
 			}
 			for (let compteur = 0; compteur < reponseUser.length; compteur++)
 			{
-			if ( reponseUser[compteur] == combinaisonOrdi[compteur] )
-			{
+				if ( reponseUser[compteur] == combinaisonOrdi[compteur] )
+				{
 				console.log("La couleur  " + (compteur + 1) +" est bonne !")
-			}
+				}
 			}
 		}
 		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3]))
 		{
 			console.log("Bravo, vous avez gagné");
 		break;
-		}
-		for (let compteur = 0; compteur < reponseUser.length; compteur++)
-		{
-			if ( reponseUser[compteur] == combinaisonOrdi[compteur] )
-			{
-				console.log("La couleur  " + (compteur + 1) +" est bonne !")
-			}
 		}
 	}
 }
