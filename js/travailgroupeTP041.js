@@ -1,26 +1,8 @@
-/* Description programme :
-
-Pour le fonctionnement du programme : 
-1) On génère une combinaison de 4 chiffres aléatoires (parmi 6 choix possibles) dans un array [combinaisonOrdi] 
-
-2) On associe chaque chiffre de 0 à 5 à la valeur d'une couleur : bleu, rouge, jaune, vert, blanc, noir (avec un switch par exemple) => A cette étape, on a un array 
-combinaisonOrdi avec 4 couleurs dedans. Ex [bleu, blanc, jaune, rouge] 
-
-3) Avec une boucle qui vérifie si la valeur est EXACTEMENT correcte (par ex "bleu" et pas "BLEU" ou "Bleu"), on demande à l'utilisateur de rentrer 4 fois la valeur d'une couleur, parmi les 6 choix disponibles et on vient placer ces valeurs dans un nouvel array [reponseUser] 
-
-4) Avec des conditions et une boucle on vient chercher chaque élément de reponseUser et reponseOrdi pour les comparer 
-
-5) La console renvoie à l'utilisateur le résultat de la comparaison au niveau des couleurs et au niveaux des positions 
-
-6) Ensuite l'utilisateur renvoie une nouvelle série de 4 couleurs, etc... /!\ il nous faut un compteur de manche pour que le jeu se termine au max après 10 tentatives OU avant si le joueur à la combinaison exacte (avec un return "message de fin" par exemple)
-*/
-
 "use strict";
 
 /**
- * Fonction qui...
- *
- * @example
+ * Fonction qui respecte le principe du jeu de société "Mastermind" :
+ * Le but du jeu du Mastermind est pour le joueur de deviner en un minimum de tentatives une combinaison de 4 couleurs choisie aléatoirement (ici, par l'ordinateur) 
  *
  * @param {}
  *
@@ -60,7 +42,7 @@ function travailGroupe()
 
 	for (tentative = 0; tentative < 10; tentative++) // Boucle qui permet les 10 tentatives possibles en les comptant
 	{
-		if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées
+		if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
 		{
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
 			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
