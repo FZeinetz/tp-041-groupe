@@ -70,7 +70,7 @@ function travailGroupe()
 		}
 		for  (let emplacement=1; emplacement<5; emplacement++) //Remplissage du tableau de l'utilisateur et comparaison avec le tableau de l'ordinateur 
 		{
-			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ? Si vous voulez arrêter de jouer, écrivez\"stop\"");
+			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ? Couleurs : orange, bleu, rouge, vert, jaune, violet");
 			
 			if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet"))
 			{
