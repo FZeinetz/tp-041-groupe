@@ -61,7 +61,7 @@ function travailGroupe()
 	{
 		if (tentative >= 0) 
 		{
-			console.log ("Non, ce n’est pas ça ! Retentez votre chance !");
+			console.log ("Retentez votre chance !");
 		}
 		else if (tentative == 9)
 		{
