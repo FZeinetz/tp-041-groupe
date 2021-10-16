@@ -10,7 +10,7 @@
  *
  */
 
-function travailGroupe()
+function jouerAuMastermind()
 {
 	// déclaration des variables 
 	let combinaisonOrdi = []; // tableau contenant la combinaison de couleurs choisie aléatoirement
