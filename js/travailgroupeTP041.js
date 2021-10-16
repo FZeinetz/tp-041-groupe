@@ -1,3 +1,5 @@
+"use strict"
+
 /**
  * Fonction qui...
  *
