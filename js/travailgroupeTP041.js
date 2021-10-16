@@ -64,7 +64,7 @@ function travailGroupe()
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
 			break;
 		}
-		else if (tentative >= 0) 
+		else if (tentative > 0) 
 		{
 			console.log ("Retentez votre chance !");
 		}
