@@ -59,14 +59,14 @@ function travailGroupe()
 
 	for (tentative = 0; tentative < 10; tentative++)
 	{
-		if (tentative >= 0) 
-		{
-			console.log ("Retentez votre chance !");
-		}
-		else if (tentative == 9)
+		if (tentative == 9)
 		{
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
 			break;
+		}
+		else if (tentative >= 0) 
+		{
+			console.log ("Retentez votre chance !");
 		}
 		for  (let emplacement=1; emplacement<5; emplacement++) 
 		{
