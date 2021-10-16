@@ -30,16 +30,17 @@ combinaisonOrdi avec 4 couleurs dedans. Ex [bleu, blanc, jaune, rouge]
 
 function travailGroupe()
 {
-	let combinaisonOrdi = [];
-	let couleurChoisie;
-	let reponseUser = [];
-	let tentative;
+	// déclaration des variables 
+	let combinaisonOrdi = []; // tableau contenant la combinaison de couleurs choisie aléatoirement
+	let couleurChoisie; // Couleur entrée par l'utilisateur lorsque demandée 
+	let reponseUser = []; // tableau contenant la combinaison choisie par l'utilisateur
+	let tentative; // nombre de tentatives de l'utilisateur
 
-	for (let compteur=0 ; compteur<4; compteur++)
+	for (let compteur=0 ; compteur<4; compteur++) // Définition de la combinaison de l'ordinateur dans un tableau
 	{
-	combinaisonOrdi.push(Math.floor(Math.random() * 6))
+	combinaisonOrdi.push(Math.floor(Math.random() * 6)) // Attribution de 4 chiffres aléatoires entre 0 et 5 pour les 4 premiers emplacements de l'array 
 
-		switch (true)
+		switch (true) //Convertion des chiffres en string pour chacune des couleur proposée
 		{
 			case (combinaisonOrdi[compteur] == 0) : combinaisonOrdi[compteur] = "orange";
 													break;
@@ -57,36 +58,36 @@ function travailGroupe()
 		}
 	}
 
-	for (tentative = 0; tentative < 10; tentative++)
+	for (tentative = 0; tentative < 10; tentative++) //Boucle qui permet les 10 tentatives possibles en les comptant
 	{
-		if (tentative == 9)
+		if (tentative == 9) //Sortie de la boucle si les 10 tentatives sont écoulées
 		{
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
 			break;
 		}
-		else if (tentative > 0) 
+		else if (tentative > 0) //Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative"
 		{
 			console.log ("Retentez votre chance !");
 		}
-		for  (let emplacement=1; emplacement<5; emplacement++) //Remplissage du tableau de l'utilisateur et comparaison avec le tableau de l'ordinateur 
+		for  (let emplacement=1; emplacement<5; emplacement++) //Boucle servant au remplissage du tableau par l'utilisateur 
 		{
-			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ? Couleurs : orange, bleu, rouge, vert, jaune, violet");
+			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ? Couleurs : orange, bleu, rouge, vert, jaune, violet"); //Remplissage de l'emplacement par l'utilisateur 
 			
-			if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet"))
+			if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet")) // Voir si les valeurs encodées correspondent bien aux couleurs
 			{
 				reponseUser[emplacement-1]=couleurChoisie;
 			}
-			else 
+			else // Message d'erreur si incompréhension de la valeur donnée
 			{
 				console.log("Erreur, nous n’avons pas compris. Veuillez choisir une couleur parmi orange, bleu, rouge, vert, jaune et violet");
 				emplacement -= 1;
 			}
-			if ( reponseUser[emplacement-1] == combinaisonOrdi[emplacement-1] )
+			if ( reponseUser[emplacement-1] == combinaisonOrdi[emplacement-1] ) // Comparaison avec la couleur choisie par l'ordinateur à cet emplacement et affichage si la couleur correspond
 			{
 			console.log("La couleur  " + emplacement +" est bonne !")
 			}
 		}
-		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3]))
+		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3])) //Comparaison du tableau de l'utilisateur avec le tableau de l'ordinateur et arrêt de la boucle si gagné
 		{
 			console.log("Bravo, vous avez gagné");
 		break;
