@@ -90,7 +90,7 @@ function travailGroupe()
 				console.log("Erreur, nous n’avons pas compris. Veuillez choisir une couleur parmi orange, bleu, rouge, vert, jaune et violet");
 				emplacement -= 1;
 			}
-			if ( reponseUser[emplacement] == combinaisonOrdi[emplacement] )
+			if ( reponseUser[emplacement-1] == combinaisonOrdi[emplacement-1] )
 			{
 			console.log("La couleur  " + emplacement +" est bonne !")
 			}
