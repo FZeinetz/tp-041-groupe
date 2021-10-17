@@ -37,16 +37,16 @@ function jouerAuMastermind()
 		}
 	}
 
-	for (tentative = 0; tentative < 11; tentative++) // Boucle qui permet les 10 tentatives possibles en les comptant
+	for (tentative = 1; tentative < 12; tentative++) // Boucle qui permet les 10 tentatives possibles en les comptant
 	{
-		if (tentative == 10) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
+		if (tentative == 11) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
 		{
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
 			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
 			break;
 		}
 		
-		else if (tentative >= 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
+		else if (tentative >= 1) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
 		{
 			for  (let emplacement=1; emplacement<5; emplacement++) // Boucle servant au remplissage du tableau par l'utilisateur 
 			{
