@@ -45,7 +45,7 @@ function jouerAuMastermind()
 			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
 			break;
 		}
-		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
+		else if (tentative >= 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
 		{
 			alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ tentative +". Retentez votre chance ! Encore "+ (10 - tentative) + " tentative(s).");
 		}
