@@ -39,38 +39,41 @@ function jouerAuMastermind()
 
 	for (tentative = 0; tentative < 10; tentative++) // Boucle qui permet les 10 tentatives possibles en les comptant
 	{
-		if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
+		if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
+		{
+			for  (let emplacement=1; emplacement<5; emplacement++) // Boucle servant au remplissage du tableau par l'utilisateur 
+			{
+				couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ? Couleurs : orange, bleu, rouge, vert, jaune, violet"); // Remplissage de l'emplacement par l'utilisateur 
+
+				if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet")) // Voir si les valeurs encodées correspondent aux couleurs reconnues par le programme
+				{
+					reponseUser[emplacement-1]=couleurChoisie;
+				}
+				else // Message d'erreur si incompréhension de la valeur donnée
+				{
+					console.log("Erreur, nous n’avons pas compris. Veuillez choisir une couleur parmi orange, bleu, rouge, vert, jaune et violet");
+					emplacement -= 1;
+				}
+				if ( reponseUser[emplacement-1] == combinaisonOrdi[emplacement-1] ) // Comparaison avec la couleur choisie par l'ordinateur à cet emplacement et affichage si la couleur correspond
+				{
+				console.log("La couleur  " + emplacement +" est bonne !");
+				}
+			}
+			
+			alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ tentative +". Retentez votre chance ! Encore "+ (10 - tentative) + " tentative(s).");
+			
+			if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3])) // Comparaison du tableau de l'utilisateur avec le tableau de l'ordinateur et arrêt de la boucle si gagné
+			{
+				alert("Bravo, vous avez gagné");
+			break;
+			}
+		}
+		
+		else if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
 		{
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
 			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
 			break;
-		}
-		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
-		{
-			alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ tentative +". Retentez votre chance ! Encore "+ (10 - tentative) + " tentative(s).");
-		}
-		for  (let emplacement=1; emplacement<5; emplacement++) // Boucle servant au remplissage du tableau par l'utilisateur 
-		{
-			couleurChoisie = prompt("Quelle couleur voulez-vous mettre à l'emplacement  " + emplacement + " ? Couleurs : orange, bleu, rouge, vert, jaune, violet"); // Remplissage de l'emplacement par l'utilisateur 
-			
-			if ((couleurChoisie == "orange") || (couleurChoisie == "bleu") || (couleurChoisie == "rouge") || (couleurChoisie == "vert") || (couleurChoisie == "jaune") || (couleurChoisie == "violet")) // Voir si les valeurs encodées correspondent aux couleurs reconnues par le programme
-			{
-				reponseUser[emplacement-1]=couleurChoisie;
-			}
-			else // Message d'erreur si incompréhension de la valeur donnée
-			{
-				console.log("Erreur, nous n’avons pas compris. Veuillez choisir une couleur parmi orange, bleu, rouge, vert, jaune et violet");
-				emplacement -= 1;
-			}
-			if ( reponseUser[emplacement-1] == combinaisonOrdi[emplacement-1] ) // Comparaison avec la couleur choisie par l'ordinateur à cet emplacement et affichage si la couleur correspond
-			{
-			console.log("La couleur  " + emplacement +" est bonne !");
-			}
-		}
-		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3])) // Comparaison du tableau de l'utilisateur avec le tableau de l'ordinateur et arrêt de la boucle si gagné
-		{
-			alert("Bravo, vous avez gagné");
-		break;
 		}
 	}
 }
