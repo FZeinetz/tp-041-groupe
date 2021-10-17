@@ -37,9 +37,9 @@ function jouerAuMastermind()
 		}
 	}
 
-	for (tentative = 0; tentative < 10; tentative++) // Boucle qui permet les 10 tentatives possibles en les comptant
+	for (tentative = 0; tentative < 11; tentative++) // Boucle qui permet les 10 tentatives possibles en les comptant
 	{
-		if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
+		if (tentative == 10) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
 		{
 			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
 			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
@@ -74,11 +74,11 @@ function jouerAuMastermind()
 			}
 			
 			else {
-				if (tentative == 9) {
+				if (tentative == 10) {
 					alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ (tentative+1) +".");
 				}
 				else {
-					alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ (tentative+1) +". Retentez votre chance ! Encore "+ (10 - tentative+1) + " tentative(s).");
+					alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ (tentative+1) +". Retentez votre chance ! Encore "+ (9 - tentative+1) + " tentative(s).");
 				}
 			}
 		}
