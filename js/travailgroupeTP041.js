@@ -69,7 +69,7 @@ function jouerAuMastermind()
 		}
 		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3])) // Comparaison du tableau de l'utilisateur avec le tableau de l'ordinateur et arrêt de la boucle si gagné
 		{
-			console.log("Bravo, vous avez gagné");
+			alert("Bravo, vous avez gagné");
 		break;
 		}
 	}
