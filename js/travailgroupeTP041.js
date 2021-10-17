@@ -48,7 +48,7 @@ function jouerAuMastermind()
 			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
 			break;
 		}
-		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative"
+		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
 		{
 			console.log ("Retentez votre chance !");
 		}
@@ -67,7 +67,7 @@ function jouerAuMastermind()
 			}
 			if ( reponseUser[emplacement-1] == combinaisonOrdi[emplacement-1] ) // Comparaison avec la couleur choisie par l'ordinateur à cet emplacement et affichage si la couleur correspond
 			{
-			console.log("La couleur  " + emplacement +" est bonne !")
+			console.log("La couleur  " + emplacement +" est bonne !");
 			}
 		}
 		if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3])) // Comparaison du tableau de l'utilisateur avec le tableau de l'ordinateur et arrêt de la boucle si gagné
