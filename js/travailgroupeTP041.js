@@ -46,7 +46,7 @@ function jouerAuMastermind()
 			break;
 		}
 		
-		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
+		else if (tentative >= 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
 		{
 			for  (let emplacement=1; emplacement<5; emplacement++) // Boucle servant au remplissage du tableau par l'utilisateur 
 			{
