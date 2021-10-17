@@ -74,7 +74,7 @@ function jouerAuMastermind()
 			}
 			
 			else {
-				if (tentative == 10) {
+				if (tentative == 9) {
 					alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ (tentative+1) +".");
 				}
 				else {
