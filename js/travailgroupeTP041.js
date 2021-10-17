@@ -39,7 +39,14 @@ function jouerAuMastermind()
 
 	for (tentative = 0; tentative < 10; tentative++) // Boucle qui permet les 10 tentatives possibles en les comptant
 	{
-		if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
+		if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
+		{
+			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
+			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
+			break;
+		}
+		
+		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
 		{
 			for  (let emplacement=1; emplacement<5; emplacement++) // Boucle servant au remplissage du tableau par l'utilisateur 
 			{
@@ -60,20 +67,15 @@ function jouerAuMastermind()
 				}
 			}
 			
-			alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ tentative +". Retentez votre chance ! Encore "+ (10 - tentative) + " tentative(s).");
-			
 			if ((reponseUser[0] == combinaisonOrdi[0]) && (reponseUser[1] == combinaisonOrdi[1]) && (reponseUser[2] == combinaisonOrdi[2]) && (reponseUser[3] == combinaisonOrdi[3])) // Comparaison du tableau de l'utilisateur avec le tableau de l'ordinateur et arrêt de la boucle si gagné
 			{
 				alert("Bravo, vous avez gagné");
-			break;
+				break;
 			}
-		}
-		
-		else if (tentative == 9) // Sortie de la boucle si les 10 tentatives sont écoulées et affichage de la réponse
-		{
-			console.log("Vous avez atteint 10 tentatives. Vous avez perdu");
-			console.log("La réponse était " + combinaisonOrdi[0] + ", " + combinaisonOrdi[1] + ", " + combinaisonOrdi[2] + ", " + combinaisonOrdi[3] + ".");
-			break;
+			
+			else {
+				alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ tentative +". Retentez votre chance ! Encore "+ (10 - tentative) + " tentative(s).");
+			}
 		}
 	}
 }
