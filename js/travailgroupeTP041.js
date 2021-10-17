@@ -4,7 +4,7 @@
  * Fonction qui respecte à peu de choses près le principe du jeu de société "Mastermind" :
  * Le but du jeu Mastermind est pour le joueur de deviner en un minimum de tentatives une combinaison de 4 couleurs choisies aléatoirement (ici, par l'ordinateur) 
  *
- * Cette fonction ne reçoit aucun paramètre et aucun retour.
+ * Cette fonction ne reçoit aucun paramètre et ne retourne rien.
  */
 
 function jouerAuMastermind()
