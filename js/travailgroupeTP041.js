@@ -74,7 +74,7 @@ function jouerAuMastermind()
 			}
 			
 			else {
-				alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ tentative+1 +". Retentez votre chance ! Encore "+ (10 - tentative+1) + " tentative(s).");
+				alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ (tentative+1) +". Retentez votre chance ! Encore "+ (10 - tentative+1) + " tentative(s).");
 			}
 		}
 	}
