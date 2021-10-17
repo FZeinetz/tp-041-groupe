@@ -4,10 +4,7 @@
  * Fonction qui respecte à peu de choses près le principe du jeu de société "Mastermind" :
  * Le but du jeu Mastermind est pour le joueur de deviner en un minimum de tentatives une combinaison de 4 couleurs choisies aléatoirement (ici, par l'ordinateur) 
  *
- * @param {}
- *
- * @return {}
- *
+ * Cette fonction ne reçoit aucun paramètre et aucun retour.
  */
 
 function jouerAuMastermind()
@@ -50,7 +47,7 @@ function jouerAuMastermind()
 		}
 		else if (tentative > 0) // Message "Retentez votre chance" si l'utilisateur n'est pas à sa première tentative
 		{
-			Alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ tentative+1 +". Retentez votre chance ! Encore "+ 10 - (tentative+1) + "tentative\(s\)");
+			alert("Vous n'avez pas trouvé la combinaison correcte. Fin de la manche "+ (tentative + 1) +". Retentez votre chance ! Encore "+ (10 - (tentative +1 )) + "tentative(s).");
 		}
 		for  (let emplacement=1; emplacement<5; emplacement++) // Boucle servant au remplissage du tableau par l'utilisateur 
 		{
