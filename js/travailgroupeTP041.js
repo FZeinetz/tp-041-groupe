@@ -2,7 +2,7 @@
 
 /**
  * Fonction qui respecte le principe du jeu de société "Mastermind" :
- * Le but du jeu Mastermind est pour le joueur de deviner en un minimum de tentatives une combinaison de 4 couleurs choisie aléatoirement (ici, par l'ordinateur) 
+ * Le but du jeu Mastermind est pour le joueur de deviner en un minimum de tentatives une combinaison de 4 couleurs choisies aléatoirement (ici, par l'ordinateur) 
  *
  * @param {}
  *
